@@ -5,7 +5,7 @@
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="title">安卓小例子</string>
     <string name="ex_str">样例</string>
-    <string name="long_str">你好吗abcdefghijklmnop不好吗qrstuvwxyzabcde去适当放宽吧fghijklmn好吧opqrstuv够长了吧wxyz</string>
+    <string name="long_str">只要你每天坚持自习，认真刻苦，态度端正，忍受孤独，最终的胜利肯定是属于那些考场上发挥好的人。</string>
     <string name="hint_web">请输入网址</string>
     <string name="open">打开</string>
     <string name="open_other">外链</string>
