@@ -50,7 +50,9 @@ sdk.dir=F\:\\AdroidSDK
 ndk是andoidexample2018会用到的，ndk和sdk都需修改成本地ndk和sdk的路径
 
 ## AndroidExample简介
+![图标](document/imgs/t1.png)
 这个里面包含了最基本的例子，下面是例子清单：
+![清单](document/imgs/2018-05-19_224936.png)
 
 - 颜色表：com.study.android.activity.other.ColorActivity
 - 跑马灯效果：com.study.android.activity.layerout.MarqueeActivity
@@ -81,10 +83,15 @@ ndk是andoidexample2018会用到的，ndk和sdk都需修改成本地ndk和sdk的
 
 这些例子都是在src\main\assets\config.properties文件中配置的
 
+![颜色表](document/imgs/20180519225028.png)
+![布局表](document/imgs/2018-05-19_225203.png)
+![跑马灯](document/imgs/2018-05-19_225229.png)
+![复杂列表](document/imgs/2018-05-19_225203.png)
+
 ## andoidexample2018简介
-
+![图标](document/imgs/t2.png)
 这个里面包含了新UI布局的例子，下面是例子清单：
-
+![清单](document/imgs/2018-05-19_225251.png)
 - 百分比布局,.demo.PercentActivity
 - SnackBar/ToolBar/TextInput,.demo.SnackbarActivity
 - 浮动按钮,.demo.FloatingActionButtonActivity
@@ -93,3 +100,6 @@ ndk是andoidexample2018会用到的，ndk和sdk都需修改成本地ndk和sdk的
 - c编译,.demo.CActivity
 
 这些例子都是在src\main\assets\config.properties文件中配置的
+
+![百分比布局](document/imgs/2018-05-19_225313.png)
+![标签布局](document/imgs/2018-05-19_225329.png)
