@@ -23,7 +23,7 @@ public class MainActivity extends Activity implements OnItemClickListener{
 		setContentView(R.layout.activity_main);
 
 		try {
-			PP.load(this.getApplicationContext().getAssets().open("cfg.properties"));
+			PP.load(this.getApplicationContext().getAssets().open("config.properties"));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
