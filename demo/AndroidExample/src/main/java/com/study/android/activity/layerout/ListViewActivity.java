@@ -54,7 +54,7 @@ public class ListViewActivity extends Activity implements OnItemClickListener,On
 	}
 
 	private List<Map<String, Object>> getData() {
-		String[] apps=PP.getValue("APPS").split("\\|");
+		String[] apps=PP.getValueArray("APPS","\\|");
 		
 		for (int i = 0; i < apps.length; i++) {
 			String[] info=apps[i].split(":");

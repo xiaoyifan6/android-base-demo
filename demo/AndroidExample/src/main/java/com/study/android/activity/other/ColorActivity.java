@@ -97,7 +97,7 @@ public class ColorActivity extends Activity{
 	private List<? extends Map<String, Object>> getData() {
 		List<Map<String, Object>> list=new ArrayList<Map<String,Object>>();
 		
-		String[] colorlist=PP.getValue("COLORLIST").split("\\|");
+		String[] colorlist=PP.getValueArray("COLORLIST","\\|");
 		for (int i = 0; i < colorlist.length; i++) {
 			Map<String, Object> m=new HashMap<String, Object>();
 			m.put("colorInfo",colorlist[i]);

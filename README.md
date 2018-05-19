@@ -12,18 +12,18 @@ android的一些最基本的入门的例子
 
 ## 目录说明
 
-android-base-demo
-\- document 文档
-\- demo 源码目录
-\-\- AndroidExample Android 基本例子
-\-\- andoidexample2018 Android新UI例子
-\-\- build 项目构建目录
-\-\- gradle
-\-\-\- wrapper\gradle-wrapper.properties
-\-\- projectFilesBackup
-\-\- conn_MuMu.bat adb链接mumu虚拟机的脚本
-\-\- gradle.properties
-\-\- local.properties
+    android-base-demo
+    - document 文档
+    - demo 源码目录
+    -- AndroidExample Android 基本例子
+    -- andoidexample2018 Android新UI例子
+    -- build 项目构建目录
+    -- gradle
+    --- wrapper\gradle-wrapper.properties
+    -- projectFilesBackup
+    -- conn_MuMu.bat adb链接mumu虚拟机的脚本
+    -- gradle.properties
+    -- local.properties
 
 其中gradle.properties配置为：
 ```
@@ -112,15 +112,25 @@ ndk是andoidexample2018会用到的，ndk和sdk都需修改成本地ndk和sdk的
 
 首先，创建好Activity和layout,然后在assets目录下的config.properties中配置：
 
+注意:标签名称必须唯一，然后新的标签名称不能与已经定义的并非相对应的标签重名
+
 **AndroidExample的配置方法**
+
 项与项之间用‘|’隔开，每一项的列表项名称与Activity路径用‘-’隔开，如果需要增加新的，在后面添加‘|列表项名称-完整Activity路径’即可
 
 ```
 EXAMPLE=颜色表-com.study.android.activity.other.ColorActivity|<列表项名称>-<完整Activity>路径
 
 ```
+同时也支持标签解析：
+```
+EXAMPLE=颜色表-com.study.android.activity.other.ColorActivity|<标签名称>
+
+<标签名称>=<列表项名称>-<完整Activity>路径
+```
 
 **andoidexample2018的配置方法**
+
 AndroidExample的配置方法,项与项之间用‘|’隔开，每一项的列表项名称与Activity路径用‘,’隔开，如果需要增加新的，在后面添加‘|列表项名称,完整Activity路径’即可,也可以像下面这样，添加标签，然后再定义标签为‘<标签名称>=<列表项名称>-<Activity相对路径>’
 
 ```

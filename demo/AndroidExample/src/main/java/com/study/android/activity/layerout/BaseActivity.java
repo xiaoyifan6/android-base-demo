@@ -91,7 +91,7 @@ public class BaseActivity extends Activity {
 	private void initSpinner() {
 		Spinner spinner=(Spinner) findViewById(R.id.spinner1);
 		
-		String[] citys=PP.getValue("CITY").split("\\|");
+		String[] citys=PP.getValueArray("CITY","\\|");
 		final ArrayAdapter<String> adapter=new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,Arrays.asList(citys));
 		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		
@@ -127,7 +127,7 @@ public class BaseActivity extends Activity {
 
 	private void initMultyAutoComplete() {
 		MultiAutoCompleteTextView cmp_auto=(MultiAutoCompleteTextView) findViewById(R.id.cmp_ma);
-		String[] citys=PP.getValue("CITY").split("\\|");
+		String[] citys=PP.getValueArray("CITY","\\|");
 		ArrayAdapter<String> adapter=new ArrayAdapter<String>(this,R.layout.simple_list_item,citys);
 		cmp_auto.setAdapter(adapter);
 		//设置以逗号为分隔符为结束符
@@ -146,7 +146,7 @@ public class BaseActivity extends Activity {
 
 	private void initAutoComplete() {
 		AutoCompleteTextView cmp_auto=(AutoCompleteTextView) findViewById(R.id.cmp_auto);
-		String[] citys=PP.getValue("CITY").split("\\|");
+		String[] citys=PP.getValueArray("CITY","\\|");
 		//android.R.layout.simple_expandable_list_item_1
 		ArrayAdapter<String> adapter=new ArrayAdapter<String>(this,R.layout.simple_list_item,citys);
 		cmp_auto.setAdapter(adapter);

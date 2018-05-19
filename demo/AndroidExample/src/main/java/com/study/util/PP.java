@@ -180,7 +180,50 @@ public class PP {
 		}
 	}
 
+	/**
+	 * 支持标签的解析
+	 * @param key
+	 * @return
+	 */
+	public static List<String> getValues(String key,String split){
+		String value = instance.p.getProperty(key);
+		List<String> list = new ArrayList<>();
+		if(value != null && value.trim().length() > 0){
+			for (String str: value.split(split)) {
+				String v = getValue(str);
+				if(v != null && v.trim().length() > 0){
+					list.add(v);
+				}else {
+					list.add(str);
+				}
+			}
+		}
+		return list;
+	}
+
+	/**
+	 * 支持标签的解析
+	 * @param key
+	 * @return
+	 */
+	public static String[] getValueArray(String key,String split){
+		List<String> list = getValues(key,split);
+		String[] arr = new String[list.size()];
+		int i=0;
+		for (String str:list ) {
+			arr[i++] = str;
+		}
+		return arr;
+	}
+
+	/**
+	 * 支持标签的解析
+	 * @param key
+	 * @return
+	 */
 	public static String getValue(String key){
-		return instance.p.getProperty(key);
+		String value = instance.p.getProperty(key);
+		if(value != null && value.trim().length() > 0 && instance.p.containsKey(value))return getValue(value);
+		return value;
 	}
 }

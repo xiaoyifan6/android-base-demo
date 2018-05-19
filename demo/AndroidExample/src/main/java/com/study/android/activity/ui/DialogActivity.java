@@ -94,7 +94,7 @@ public class DialogActivity extends Activity implements OnClickListener{
 				break;
 			case R.id.button2:
 				{
-					final String citys[]=PP.getValue("CITY").split("\\|");
+					final String citys[]=PP.getValueArray("CITY","\\|");
 					builder.setSingleChoiceItems(citys, 0, new DialogInterface.OnClickListener() {
 						@Override
 						public void onClick(DialogInterface dialog, int which) {
@@ -108,7 +108,7 @@ public class DialogActivity extends Activity implements OnClickListener{
 				break;
 			case R.id.button3:
 				{
-					final String citys[]=PP.getValue("CITY").split("\\|");
+					final String citys[]=PP.getValueArray("CITY","\\|");
 					builder.setMultiChoiceItems(citys, null, new DialogInterface.OnMultiChoiceClickListener() {
 						@Override
 						public void onClick(DialogInterface dialog, int which, boolean isChecked) {
@@ -133,7 +133,7 @@ public class DialogActivity extends Activity implements OnClickListener{
 				break;
 			case R.id.button4:
 				{
-					final String citys[]=PP.getValue("CITY").split("\\|");
+					final String citys[]=PP.getValueArray("CITY","\\|");
 					builder.setItems(citys, new DialogInterface.OnClickListener() {
 						
 						@Override

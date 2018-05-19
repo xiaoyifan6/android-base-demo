@@ -19,7 +19,7 @@ import com.study.util.PP;
 
 public class MenuActivity extends Activity{
 	
-	String[] citis=PP.getValue("CITY").split("\\|");
+	String[] citis=PP.getValueArray("CITY","\\|");
 	ListView listView;
 	ArrayAdapter<String> adapter;
 	

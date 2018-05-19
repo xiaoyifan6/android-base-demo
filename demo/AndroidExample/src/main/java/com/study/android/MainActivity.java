@@ -38,7 +38,7 @@ public class MainActivity extends Activity implements OnItemClickListener{
 		if(lis.equals("null")){
 			return;
 		}else{
-			String[] names=lis.split("\\|");
+			String[] names=PP.getValueArray("EXAMPLE","\\|");
 			String[] items=new String[names.length];
 					 packges=new String[names.length];
 			for (int i = 0; i < names.length; i++) {
