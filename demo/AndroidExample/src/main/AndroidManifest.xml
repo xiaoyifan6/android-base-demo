@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.oyz.thisismyapp">
+
+    <!-- 联网 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- 网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <!-- 日志 -->
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <!-- 短信 -->
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <!-- 震动 -->
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <!-- 指示灯 -->
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.oyz.thisismyapp.NewMainActivity">
+        </activity>
+
+        <activity
+            android:name="com.study.android.MainActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.study.android.activity.other.ColorActivity"
+            >
+        </activity>
+        <activity
+            android:name="com.study.android.activity.layerout.MarqueeActivity"
+            >
+        </activity>
+        <activity
+            android:name="com.study.android.activity.layerout.WebActivity"
+            >
+        </activity>
+        <activity
+            android:name="com.study.android.activity.layerout.BaseActivity"
+            >
+        </activity>
+        <activity
+            android:name="com.study.android.activity.layerout.ProgressActivity"
+            >
+        </activity>
+        <activity
+            android:name="com.study.android.activity.layerout.TimeAndDateActivity"
+            android:theme="@style/AppTheme"
+            >
+        </activity>
+        <activity
+            android:name="com.study.android.activity.layerout.ListViewActivity"
+            android:theme="@style/AppTheme"
+            >
+        </activity>
+        <activity
+            android:name="com.study.android.activity.layerout.GridViewActivity"
+            >
+        </activity>
+        <activity
+            android:name="com.study.android.activity.layerout.TableViewActivity"
+            >
+        </activity>
+        <activity
+            android:name="com.study.android.activity.layerout.SecondActivity"
+            >
+        </activity>
+        <activity
+            android:name="com.study.android.activity.layerout.FragmentActivity"
+            >
+        </activity>
+        <activity
+            android:name="com.study.android.activity.layerout.ThirdActivity"
+            android:theme="@android:style/Animation.Dialog"
+            >
+            <intent-filter>
+                <action android:name="aaa.layerout.ThirdActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.study.android.activity.layerout.FrameActivity"
+            >
+        </activity>
+        <activity
+            android:name="com.study.android.activity.layerout.Fragment_view"
+            >
+        </activity>
+        <activity
+            android:name="com.study.android.activity.layerout.ViewPagerActivity"
+            android:theme="@style/AppTheme"
+            >
+        </activity>
+        <activity
+            android:name="com.study.android.activity.layerout.FragmentViewPagerActivity"
+            android:theme="@style/AppTheme"
+            >
+        </activity>
+        <activity
+            android:name="com.study.android.activity.layerout.ViewFlipperActivity"
+            >
+        </activity>
+        <activity
+            android:name="com.study.android.activity.layerout.ScrollViewActivity"
+            >
+        </activity>
+        <activity
+            android:name="com.study.android.activity.layerout.GalleryAndImageSwicherActivity"
+            >
+        </activity>
+        <activity
+            android:name="com.study.android.activity.layerout.YouHuaActivity"
+            >
+        </activity>
+        <activity
+            android:name="com.study.android.activity.ui.ToastActivity"
+            >
+        </activity>
+        <activity
+            android:name="com.study.android.activity.ui.DialogActivity"
+            >
+        </activity>
+        <activity
+            android:name="com.study.android.activity.ui.NotificationActivity"
+            >
+        </activity>
+        <activity
+            android:name="com.study.android.activity.ui.MenuActivity"
+            android:theme="@style/AppTheme"
+            >
+        </activity>
+        <activity
+            android:name="com.study.android.activity.data.SharedPreferencesActivity"
+            >
+        </activity>
+        <activity
+            android:name="com.study.android.activity.data.SQLiteActivity"
+            >
+        </activity>
+        <activity
+            android:name="com.study.android.activity.data.FileActivity"
+            >
+        </activity>
+    </application>
+</manifest>

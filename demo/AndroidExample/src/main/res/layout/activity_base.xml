@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+        android:orientation="horizontal" >
+
+        <AutoCompleteTextView
+            android:id="@+id/cmp_auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/ex_str"
+            android:completionThreshold="1"
+            android:textColor="@color/black"
+            >
+        </AutoCompleteTextView>
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_marginTop="0dp"
+        android:orientation="horizontal" >
+
+        <MultiAutoCompleteTextView
+            android:id="@+id/cmp_ma"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/ex_str"
+            android:completionThreshold="1"
+            android:singleLine="true"
+             >
+        </MultiAutoCompleteTextView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/linearLayout2"
+        android:layout_marginTop="0dp"
+        android:orientation="horizontal" 
+        android:gravity="center"
+        >
+
+        <RatingBar
+            android:id="@+id/ratingBar1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="0dp"
+            android:max="5"
+            android:numStars="5"
+            android:rating="1.5" 
+            android:paddingRight="0dp"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/linearLayout3"
+        android:layout_marginTop="0dp"
+        android:orientation="horizontal" >
+
+        <Spinner
+            android:id="@+id/spinner1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:gravity="center_vertical"
+            >
+            
+         </Spinner>
+    </LinearLayout>
+    <RadioGroup 
+		    android:id="@+id/bgng_gendle"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:weightSum="5"
+			android:layout_below="@+id/linearLayout4"
+			android:layout_alignParentLeft="true"
+        	android:layout_marginTop="0dp"
+        	android:paddingRight="10dp"
+        	android:paddingLeft="10dp"
+			>		    
+	        <RadioButton
+	            android:id="@+id/rbtn_man"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="2"
+	            android:text="@string/man" 
+				android:textSize="25sp"
+				android:checked="true"
+	            android:textColor="@color/black"/>
+	        <RadioButton
+	            android:id="@+id/rbtn_woman"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="2"
+	            android:text="@string/woman"
+	            android:textSize="25sp"
+	            android:textColor="@color/black"
+	            />
+
+			<ToggleButton 
+			    android:id="@+id/tbtn"
+			    android:layout_height="wrap_content"
+				android:layout_width="0dp"
+			    android:layout_weight="1"
+			    android:textOn="@string/open2"
+			    android:textOff="@string/close2"
+			    android:checked="true"
+			    android:layout_margin="0dp"
+			    android:background="@drawable/btn_selector"
+			    />	        
+		</RadioGroup>
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bgng_gendle"
+        android:layout_marginTop="0dp"
+        android:orientation="horizontal"
+        android:background="@color/lightgrey"
+        android:gravity="center"
+         >
+
+        <ImageView
+            android:id="@+id/imgv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/calendar"
+            android:contentDescription="@string/ex_str"
+            />
+		
+    </LinearLayout>
+
+</RelativeLayout>

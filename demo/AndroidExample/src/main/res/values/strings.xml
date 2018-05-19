@@ -1,0 +1,121 @@
+<resources>
+    <string name="app_name">Android例子</string>
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title">安卓小例子</string>
+    <string name="ex_str">样例</string>
+    <string name="long_str">你好吗abcdefghijklmnop不好吗qrstuvwxyzabcde去适当放宽吧fghijklmn好吧opqrstuv够长了吧wxyz</string>
+    <string name="hint_web">请输入网址</string>
+    <string name="open">打开</string>
+    <string name="open_other">外链</string>
+    <string name="man">男</string>
+    <string name="woman">女</string>
+    <string name="open2">开</string>
+    <string name="close2">关</string>
+    <string name="prg_str">25%</string>
+    <string name="add">增加</string>
+    <string name="reduce">减少</string>
+    <string name="reset">重置</string>
+    <string name="show_dialog">显示对话框</string>
+    <string name="auto_run">自动运行</string>
+    <string name="show_date_dialog">显示日期对话框</string>
+    <string name="show_time_dialog">显示时间对话框</string>
+    <string name="you_name">你的名字</string>
+    <string name="hint_you_name">请输入你的名字</string>
+    <string name="submit">提交</string>
+    <string name="static_load">静态加载</string>
+    <string name="move_load">动态加载</string>
+    <string name="hint2">此区域将被覆盖</string>
+    <string name="content">视图的滚动过程，其实是在不断修改原点坐标。当手指触摸后，ScrollView会暂时拦截触摸事件，使用一个计时器。假如在计时器到点后没有发生手指移动事件，那么ScrollView发送tracking events到被点击的subView；若是在计时器到点后发生了移动事件，那么ScrollView取消tracking自己促发滚动。
+目录
+
+    1 基本原理
+    2 常用属性
+    3 使用方法
+    ▪ 初始化
+    ▪ 委托方法
+    4 属性汇总
+
+基本原理
+编辑
+其子类可以重载
+
+　　	touchesShouldBegin: withEvent: inContentView: 决定自己是否接收touch事件。
+	pagingEnabled: 当值是YES会自动滚动到subView的边界，默认是NO。
+	touchesShouldCancelInContentView: 开始发送tracking messages消息给subView的时候会调用这个方法。以决定是否发送tracking messages消息到subView。假如返回NO，发送。YES则不发送。若是canCancelContentTouches属性是NO，则不调用这个方法来影响如何处理滚动手势。
+	ScrollView还可处理缩放和平移手势，要实现这必须实现委托viewForZoomingInScrollView:和scrollViewDidEndZooming: withView: atScale:两个方法。另外maximumZoomScale和minimumZoomScale两个属性要不一样[1]  。
+常用属性　　
+	带滚动条的滑动视图
+	带滚动条的滑动视图
+	maximumZoomScale 能放大的最大倍数，是浮点数。
+	minimumZoomScale 能缩小的最小倍数，是浮点数。
+	pagingEnabled 是否自动滚动到subView边界
+	scrollEnabled 是否可以滚动
+	contentSize 里面内容的大小，即可以滚动的大小，默认是0，没有滚动效果
+	showsHorizontalScrollIndicator 滚动时是否显示水平滚动条
+	showsVerticalScrollIndicator 滚动时是否显示垂直滚动条
+	bounces 默认是YES，就是滚动超过边界会反弹，即有反弹回来的效果。若是NO，则滚动到达边界会立刻停止
+	bouncesZoom 与bounces类似，只是反映在缩放效果上。
+	directionalLockEnabled 默认是NO，可以在垂直和水平方向同时运动。当值是YES时，视哪个方向开始则锁定另外一个方向的滚动。
+	indicatorStyle 滚动条的样式。总共3色：默认、黑、白
+	scrollIndicatorInsets 设置滚动条位置
+	tracking 当touch后还没有拖动的时候是YES，否则NO
+	zoomBouncing 当内容放大到最大或者最小的时候值是YES，否则NO
+	zooming 当正在缩放的时候值是YES，否则NO
+	decelerating 当滚动后，手指放开但还在继续滚动中。此时是YES，其它时候都是NO
+	decelerationRate 设置手指放开后的减速率
+使用方法
+	初始化
+	一般的控件初始化都是可以用alloc和init来初始化的。
+	　　UIScrollView *sv = [[UIScrollView alloc] initWithFrame:CGRectMake(0.0,0.0,self.view.frame.size.width, 400)];
+	关于控件添加与初始化，建议都采用代码调用合适的初始化方法来操作，虽然IB布局能够节省时间，但不能很好的了解整个代码执行流程。
+	委托方法
+	UIScrollView也要指定委托对象，该委托对象的控制器同样也要遵循UIScrollViewDelegate协议，实现其相应的代理方法。
+	scrollViewDidScroll:
+	scrollViewWillBeginDragging:
+	scrollViewDidEndDragging:
+	scrollViewDidEndDecelerating:
+属性汇总
+	android:scrollbars
+	设置滚动条显示。none（隐藏），horizontal（水平），vertical（垂直）。
+	android:scrollbarFadeDuration
+	设置滚动条淡出效果（从有到慢慢的变淡直至消失）时间，以毫秒为单位。Android2.2中滚动条滚动完之后会消失，再滚动又会出来，在1.5、1.6版本里面会一直显示着。
+	android:scrollbarSize
+	设置滚动条的宽度。
+	android:scrollbarStyle
+	设置滚动条的风格和位置。设置值：insideOverlay、insideInset、outsideOverlay、outsideInset
+	android:scrollbarThumbHorizontal
+	设置水平滚动条的drawable。
+	android:scrollbarThumbVertical
+	设置垂直滚动条的drawable.
+	android:scrollbarTrackHorizontal
+	设置水平滚动条背景（轨迹）的色drawable
+	android:soundEffectsEnabled
+	设置点击或触摸时是否有声音效果
+	</string>
+    <string name="content2">
+	    一sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+	    行rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
+	    xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+	 </string>
+    <string name="up_scroll">上滑</string>
+    <string name="down_scroll">下滑</string>
+    <string name="btn_pre">上一张</string>
+    <string name="btn_next">下一张</string>
+    <string name="btn_left">左旋</string>
+    <string name="btn_right">右旋</string>
+    <string name="_include_">include:</string>
+    <string name="merge_merge">merge:</string>
+    <string name="_subview_">ViewStub懒加载</string>
+    <string name="view_stub">ViewStub:</string>
+    <string name="_toast">自定义Toast</string>
+    <string name="_toast2">这是我自定义的Toast</string>
+    <string name="btn_close">关闭</string>
+    <string name="copy">复制</string>
+    <string name="cut">剪切</string>
+    <string name="paste">粘贴</string>
+    <string name="subMenu">子菜单</string>
+    <string name="other">其他</string>
+    <string name="setting">设置</string>
+</resources>

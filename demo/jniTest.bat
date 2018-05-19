@@ -1,0 +1,2 @@
+cd F:\AdroidStudioWorkspace\ThisIsMyApp\andoidexample2018\src\main
+javah -d jni -classpath  F:\AdroidStudioWorkspace\ThisIsMyApp\andoidexample2018\build\intermediates\classes\debug com.oyz.www.andoidexample2018.demo.c.JniTest

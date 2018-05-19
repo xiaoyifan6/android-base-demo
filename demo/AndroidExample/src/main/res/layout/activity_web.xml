@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_marginTop="4dp"
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal" 
+        android:weightSum="6"
+        >
+
+        <EditText
+            android:id="@+id/edit_web"
+            android:layout_weight="4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_web"
+            android:singleLine="true"
+            android:scrollbars="none"
+            android:inputType="textUri"
+            android:ems="20"
+            >
+        </EditText>
+
+        <Button
+            android:id="@+id/btn_open"
+            android:text="@string/open" 
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_selector"
+            android:layout_marginLeft="4dp"
+            />
+
+        <Button
+            android:id="@+id/btn_openother"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/open_other" 
+            android:layout_weight="1"
+            android:background="@drawable/btn_selector"
+            android:layout_marginLeft="4dp"
+            />
+    </LinearLayout>
+
+    <WebView
+        android:id="@+id/web_brower"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/linearLayout1" 
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="0dp"
+        />
+
+</RelativeLayout>
